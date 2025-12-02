@@ -1,0 +1,162 @@
+lab 4 exercise
+<!--S75687 Ainur Sabrina :Lab Exercise 4-->
+
+<!DOCTYPE html>
+<html>
+    <title>Webpage using HTML5 & CSS</title>
+    <head>
+        <style type="text/css">
+            header {
+                color:rgb(255, 224, 231);
+                background-color:#46011b;
+                text-align: center;
+                padding: 2rem 0;
+            }
+            h1 {
+                color:rgb(31, 5, 10);
+                text-align: center;
+                padding: 2rem 0;  
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            nav {
+                background-color:hsl(335, 27%, 84%);
+                color:#aca6a3;
+            }
+           
+            #intro {
+                text-align: center;
+                margin: 0 auto;
+                width: 80%;
+            }
+
+            #socmed {
+                text-align: center;
+                margin: 0 auto;
+                width: 80%;
+            }
+
+            #website {
+                text-align: center;
+                margin: 0 auto;
+                width: 80%;
+            }
+
+            #myemail {
+                text-align: center;
+                margin: 0 auto;
+                width: 80%;
+            }
+
+            body {
+                font-family: sas-serif;
+                margin: 0;
+                background-color: #b48991;
+                color: #201e1e;
+            }
+
+            nav a:hover {
+                color:#aca6a3;
+                text-decoration: underline;
+            }
+            nav a:link {
+                text-decoration: underline;
+            }
+            nav a:visited {
+                color:rgb(57, 130, 214);
+            }
+            nav a:active {
+                color:#aca6a3;
+                text-decoration: overline;
+            }
+
+            #media1 {
+                text-decoration: line-through;
+            }
+        </style>
+    </head>
+    <body>
+        <header>Building a Responsive Webpage with HTML5 and CSS</header>
+        <h1>Welcome to my webpage</h1>
+
+        <nav>
+        <nul>
+            <li><a href="#home">Main Page</a></li>
+            <li><a href="about">About Us</a></li>
+            <li><a href="information">Information</a></li>
+        </ul>
+        </nav>
+
+        <section id="intro">
+            <h2>Introduction</h2>
+            <p>Hello! My name is Diena</p>
+        </section>
+        <br>
+        <section id="socmed">
+            <h2> My Social Media </h2>
+            <p>Instagram: @instagram
+               Tiktok: @tiktok
+            </p>
+
+        <p><b><a href="https://www.bing.com/ck/a?!&&p=5d10748812c5e9dca56155573b551856d8be2393412ddb2752adb3d5c825a1c4JmltdHM9MTc2MjIxNDQwMA&ptn=3&ver=2&hsh=4&fclid=318a9e06-133e-65bc-02a5-889e12df6478&psq=youtube&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20v" target="website">
+            Link to youtube website
+        </a></b></p>
+        <br><br>
+        <section id="media">
+            <h3>Watch Upin Ipin Series</h3>
+             <video width="400" height="300" controls>
+            <source src="upinipin.mp4" type="video/mp4">
+            </video>
+        </section>
+        <br>
+        <section id="media1">
+            <h3>Watch Upin Ipin Movie</h3>
+            Sorry, this movie is not available in your region.
+        </section>
+        <br><br><br>
+        <section id="contact">
+            <h2>Please fill out this form</h2>
+            <form>
+                <label for="'name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <p>Gender:</p>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+
+                <p>Favourite Hobbies</p>
+                <input type="checkbox" id="running" name="hobbies" value="running">
+                <label for="running">Running</label>
+                <input type="checkbox" id="reading" name="hobbies" value="reading">
+                <label for="reading">Reading</label>
+                 <input type="checkbox" id="swimming" name="hobbies" value="swimming">
+                <label for="swimming">Swimming</label>
+                <input type="checkbox" id="drawing" name="hobbies" value="drawing">
+                <label for="drawing">Drawing</label>
+
+                <br>
+                <input type="submit" value="Submit">
+            </form>           
+        </section>
+
+        <footer>
+            &copy; Copyright.
+            <address>
+                For more information, send email to
+                <a href="myemail">
+                    dienasofea05@gmail.com
+                </a>
+            </address>
+        </footer>
+        </section>
+    </body>
+</html>
