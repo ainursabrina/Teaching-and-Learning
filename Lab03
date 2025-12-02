@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+</html><head>
+    <tittle></tittle>
+</head>
+
+<!--Tutorial Lab 03-->
+<h1>Block Elements</h1>
+<div>This is a block element</div>
+<p>This is a paragrapgh (block element)</p>
+<u1>
+    <li>List item 1</li>
+    <li>List item 2</li>
+</u1>
+<h2>Inline Elements</h2>
+<span>This is an inline element</span>
+<a href="#">This is a link(inline element)</a>
+<strong>This is a bold text(inline element)</strong>
+
+<div id="header">Header section</div>
+<div id="nav">Navigation Bar</div>
+<div id="content">Main Content Area</div>
+<div id="sidebar">Sidebar Content</div>
+<div id="footer">Footer Section</div>
+
+<html>
+    <body>This is a sign '<'</body>
+</html>
+
+<html>
+    <body>
+        <h1>Contoh Penggunaan Entiti HTML</h1>
+        <p>
+            <!--Entiti menggunakan nama-->
+            Tag html terdiri daripada simbol &lt; dan &gt;
+        </p>
+        <hr>
+             <!--Entiti menggunakan nombor-->
+            Website ini adalaah hakmilik Sabrina &#169;
+        </hr>
+    </body>
+</html>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<b><1> This text is a bold text and tittle.</1></b>
+<b><1> This text is a bold text and tittle.</b></1>
+<p></p> Instead of <p></p>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pegenalan kepada HTML</title>
+    </head>
+    <body>
+        <h1> HTML5 </h1>
+        <p> Saya suka HTML5 </p>
+        <br>
+           AINUR SABRINA 
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <form action="">
+            Pilih warna kegemaran anda :<input type="color"
+            name = "warnapilihan">
+            <br>
+            
+            Carian :<input type="search" name = "warnapilihan">
+            <br>
+            Tarikh :<input type="date" name = "tarikh">
+            <br>
+            Masa :<input type="time" name = "masa">
+            <br>
+            Bulan dan Tahun :<input type="month" name = "bulandantahun">
+            <br>
+            Laman web :<input type="url" name = "lamanweb">
+            <br>
+            Minggu:<input type="week" name = "minggu">
+            <br>
+            Email :<input type="email" name = "useremail">
+            <br>
+        </form>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <form action="">
+            Nama Pelajar: <input type="text" name="namaPelajar"
+            placeholder="Masukkan nama pelajar di sini."
+            autofocus autocomplete>
+            <br>
+            Nama Bapa: <input type="text" name="namaBapa"
+            placeholder="Masukkan nama bapa di sini."
+            required>
+            <br>
+            <input type="submit" value="Simpan">
+        </form>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <form oninput="z.value=parseInt(x.value) +
+        parseInt(y.value)">
+          <input id="x" type="range" min="0" max="10" step="1"
+          value="0"> 0 <br> +
+          <input id="y" type="number" value="10">
+          <br>=
+          <output name="z" for="x y"></output>
+        </form>
+    </body>
+</html>
+
+<!--Lab Exercise 03-->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab3.html - Contact and Calculator Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        div {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        #header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+        }
+        #content {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+        }
+        #footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input, output {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div id="header">
+        <h1>My Webpage<span>- Lab 3 </span></h1>
+    </div>
+
+    <!-- Content Section -->
+    <div id="content">
+        <h2>Contact Form</h2>
+        <form>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+
+            <label for="date">Preferred Contact Date:</label><br>
+            <input type="date" id="date" name="date"><br><br>
+
+            <label for="satisfaction">Satisfaction Level:</label><br>
+            <input type="range" id="satisfaction" name="satisfaction" min="0" max="10"><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <hr>
+
+        <!-- Inline Calculator -->
+        <h2>Simple Calculator</h2>
+        <div id="calculator">
+            <form oninput="sum.value=parseInt(num1.value)||0 + parseInt(num2.value)||0">
+                <input type="number" id="num1" name="num1" placeholder="First number">
+                +
+                <input type="number" id="num2" name="num2" placeholder="Second number">
+                =
+                <output name="sum" for="num1 num2"></output>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div id="footer">
+        <p>Contact us at: myemail@example.com</p>
+        <p>&copy; 2025 My Website. All rights reserved.</p>
+    </div>
