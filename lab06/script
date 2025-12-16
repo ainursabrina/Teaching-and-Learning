@@ -1,0 +1,101 @@
+const questions = [
+    {
+        question: "What does HTML stand for?",
+        options: ["Hyper Text Markup Language", "High Text Machine Language", "Hyperlinks Text Mark Language", "None"],
+        answer: 0
+    },
+    {
+        question: "Which language is used for styling web pages?",
+        options: ["HTML", "JQuery", "CSS", "XML"],
+        answer: 2
+    },
+    {
+        question: "Which is not a JavaScript framework?",
+        options: ["Python", "React", "Angular", "Vue"],
+        answer: 0
+    }
+];
+
+let currentQuestion = 0;
+let score = 0;
+let timeLeft = 15;
+let timer;
+
+function shuffleQuestions() {
+    questions.sort(() => Math.random() - 0.5);
+}
+
+function startTimer() {
+    clearInterval(timer);
+    timeLeft = 15;
+    document.getElementById("time").textContent = timeLeft;
+
+    timer = setInterval(() => {
+        timeLeft--;
+        document.getElementById("time").textContent = timeLeft;
+        if (timeLeft === 0) {
+            clearInterval(timer);
+            checkAnswer();
+        }
+    }, 1000);
+}
+
+function displayQuestion() {
+    const q = questions[currentQuestion];
+    document.getElementById("question").textContent = q.question;
+    const optionsDiv = document.getElementById("options");
+    optionsDiv.innerHTML = "";
+
+    q.options.forEach((opt, index) => {
+        const label = document.createElement("label");
+        label.innerHTML = `<input type="radio" name="option" value="${index}"> ${opt}`;
+        optionsDiv.appendChild(label);
+    });
+}
+
+function checkAnswer() {
+    clearInterval(timer);
+    const selected = document.querySelector('input[name="option"]:checked');
+    const feedback = document.getElementById("feedback");
+
+    if (selected && parseInt(selected.value) === questions[currentQuestion].answer) {
+        score++;
+        feedback.textContent = "Correct!";
+        feedback.style.color = "green";
+    } else {
+        feedback.textContent = "Incorrect!";
+        feedback.style.color = "red";
+    }
+
+    document.getElementById("score").textContent = "Score: " + score;
+    document.getElementById("submitBtn").disabled = true;
+    document.getElementById("nextBtn").disabled = false;
+}
+
+function nextQuestion() {
+    currentQuestion++;
+    document.getElementById("feedback").textContent = "";
+    document.getElementById("submitBtn").disabled = false;
+    document.getElementById("nextBtn").disabled = true;
+
+    if (currentQuestion < questions.length) {
+        displayQuestion();
+        startTimer();
+    } else {
+        document.getElementById("question").textContent = "Quiz Finished!";
+        document.getElementById("options").innerHTML = "";
+        document.getElementById("timer").style.display = "none";
+    }
+}
+
+function startQuiz() {
+    shuffleQuestions();
+    displayQuestion();
+    startTimer();
+}
+
+// Event listeners
+document.getElementById("submitBtn").addEventListener("click", checkAnswer);
+document.getElementById("nextBtn").addEventListener("click", nextQuestion);
+
+startQuiz();
